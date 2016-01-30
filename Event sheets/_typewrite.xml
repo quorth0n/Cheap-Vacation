@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_typewrite</name>
+    <events>
+        <event-block sid="5031110234993257">
+            <conditions>
+                <condition id="0" name="On function" sid="3915520176100767" type="Function">
+                    <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5699352382446519" type="normaltext">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="9145486553777076" type="normaltext">
+                    <param id="0" name="Instance variable">NewText</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3400195510129537">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2814522896933544" type="System">
+                    <param id="0" name="Interval (seconds)">0.055</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="8361367559406436" type="normaltext">
+                    <param id="0" name="Instance variable">NewText</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Append text" sid="4359345679299343" type="normaltext">
+                    <param id="0" name="Text">left(normaltext.NewText, 1)</param>
+                </action>
+                <action id="-10" name="Set value" sid="2302638307357013" type="normaltext">
+                    <param id="0" name="Instance variable">NewText</param>
+                    <param id="1" name="Value">right(Self.NewText, len(Self.NewText)-1)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

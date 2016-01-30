@@ -1,0 +1,6 @@
+*.uistate
+*.uistate.xml
+*.capx.backup
+*.capx.backup1
+*.capx.autosave
+*.DS_Store

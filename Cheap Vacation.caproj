@@ -1,0 +1,1663 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Cheap Vacation</name>
+    <description></description>
+    <version>Beta Playtest, Keepin&apos; it Low edition</version>
+    <author>Mulletfingers999</author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>2qpiupr2gjili</unique-id>
+    <saved-with-version>22100</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>400</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>l1_store</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Fullscreen scaling quality">Low</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="TiledBackground" sid="3206956448522659">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="WebStorage" sid="1510269620771624">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="Gamepad" sid="996683554706134">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Keyboard" sid="4436305314906168">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="3506161195311074">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="2463496682349194">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="2722091819329769">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="3498868852026895">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="normaltext" sid="2985603725420557">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="NewText" sid="4445361490861955" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="8643418535632204">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Button" sid="7303246497613241">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="road" sid="4804433513404523">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1942563755677419">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7231803174499973" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="p1_idle" sid="5750501358253467">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="dead or hurt" name="deadhurt" sid="9127371602171877" type="boolean" />
+                <instance-variable name="falling" sid="8624948145236776" type="boolean" />
+                <instance-variable name="climbing" sid="2099005148583868" type="boolean" />
+                <instance-variable name="sliding" sid="9741203999331804" type="boolean" />
+                <instance-variable name="grabbing" sid="1973703769258483" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="2964387219307318">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="476605274106937">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="7164459214513395">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="9967358956366834">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation-folder name="cousinjimmy">
+                    <animation framecount="1" loop="0" name="0idle" pingpong="0" repeatcount="1" repeatto="0" sid="6075393518075331" speed="5">
+                        <frame duration="1" hotspotX="0.50165" hotspotY="0.5" original-source="F:\keepinitlow\C0\C0_idle2.png">
+                            <image-point name="shoot" x="0.937294" y="0.594595" />
+                            <image-point name="stand" x="0.462046" y="0.994209" />
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="0walk1" pingpong="0" repeatcount="1" repeatto="0" sid="9612032091514274" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500935" original-source="F:\keepinitlow\blankman\C0_walk1.PNG">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.50165" hotspotY="0.5" original-source="F:\keepinitlow\C0\C0_idle2.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.501916" hotspotY="0.500938" original-source="F:\keepinitlow\blankman\C0_walk2.PNG">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.50165" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="0run" pingpong="0" repeatcount="1" repeatto="0" sid="185997180515283" speed="7">
+                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\C0\C0_run1.PNG">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.50165" hotspotY="0.5" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\C0\C0_idle2.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500917" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\C0\C0_run2.PNG">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.50165" hotspotY="0.5" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\C0\C0_idle2.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="0jump" pingpong="0" repeatcount="1" repeatto="0" sid="1833736750788174" speed="10">
+                        <frame duration="3" hotspotX="0.501511" hotspotY="0.5" original-source="F:\keepinitlow\img\Character\C0\C0_jump1.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="3" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\C0\C0_fall1.png" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="0hurt" pingpong="0" repeatcount="1" repeatto="0" sid="5635601057229406" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\C0\C0_fall1.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="0die" pingpong="0" repeatcount="1" repeatto="0" sid="6863329744612257" speed="0.5">
+                        <frame duration="1" hotspotX="0.501333" hotspotY="0.500967" original-source="F:\keepinitlow\blankman\C0_die1.PNG">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="0skid" pingpong="0" repeatcount="1" repeatto="0" sid="5552487300449144" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\C0\C0_skid1.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="0shoot" pingpong="0" repeatcount="1" repeatto="0" sid="3379168349049875" speed="5">
+                        <frame duration="1" hotspotX="0.501193" hotspotY="0.500967" original-source="F:\keepinitlow\C0\C0_idle3.png">
+                            <image-point name="shoot" x="1" y="0.479691" />
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="0rShoot" pingpong="0" repeatcount="1" repeatto="0" sid="3073606900772795" speed="5">
+                        <frame duration="1" hotspotX="0.501253" hotspotY="0.5" original-source="F:\keepinitlow\C0\C0_run1.PNG">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="0grab" pingpong="0" repeatcount="1" repeatto="0" sid="300309416106704" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500967" original-source="F:\keepinitlow\img\Character\C0\C0_taunt1.PNG">
+                            <collision-poly>
+                                <point x="0.138235" y="0.0909091" />
+                                <point x="0.5" y="0.00386847" />
+                                <point x="0.776471" y="0.147002" />
+                                <point x="0.676471" y="0.787234" />
+                                <point x="0.5" y="0.992263" />
+                                <point x="0.132353" y="0.912959" />
+                                <point x="0.155882" y="0.499033" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+                <animation-folder name="jake">
+                    <animation framecount="1" loop="0" name="1idle" pingpong="0" repeatcount="1" repeatto="0" sid="1749049998389712" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C2\C2_idle.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="1walk1" pingpong="0" repeatcount="1" repeatto="0" sid="8221984787063136" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C2\C2_walk1.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C2\C2_idle.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="1jump" pingpong="0" repeatcount="1" repeatto="0" sid="7752354851130397" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C2\C2_jump.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="1hurt" pingpong="0" repeatcount="1" repeatto="0" sid="8879042126546708" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C2\C2_hit.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="0" name="1die" pingpong="0" repeatcount="1" repeatto="0" sid="1739023278899131" speed="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C2\C2_death1.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C2\C2_death2.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C2\C2_death3.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+                <animation-folder name="liam1">
+                    <animation framecount="1" loop="0" name="2idle" pingpong="0" repeatcount="1" repeatto="0" sid="3159399324210165" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3B_idle.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="2walk1" pingpong="0" repeatcount="1" repeatto="0" sid="6529668176854061" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3B_walk1.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3A\C3B_idle.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="2jump" pingpong="0" repeatcount="1" repeatto="0" sid="7225482370040851" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3B_jump.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="2hurt" pingpong="0" repeatcount="1" repeatto="0" sid="7214680719503021" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3A\C3B_hit.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="2die" pingpong="0" repeatcount="1" repeatto="0" sid="1912256605829568" speed="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+                <animation-folder name="liam 2">
+                    <animation framecount="1" loop="0" name="3idle" pingpong="0" repeatcount="1" repeatto="0" sid="3495415865340768" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3A_idle.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="3walk1" pingpong="0" repeatcount="1" repeatto="0" sid="3722056676235987" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3A_walk1.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3A_idle.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="3jump" pingpong="0" repeatcount="1" repeatto="0" sid="4092171920305454" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3A_jump.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="3hurt" pingpong="0" repeatcount="1" repeatto="0" sid="6875069545647707" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3A_hit.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="0" name="3die" pingpong="0" repeatcount="1" repeatto="0" sid="3208230670791879" speed="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3A_death1.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3A_death2.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3A_death3.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+                <animation-folder name="rigo">
+                    <animation framecount="1" loop="0" name="4idle" pingpong="0" repeatcount="1" repeatto="0" sid="2217079611330326" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C4\C4_idle.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="4walk1" pingpong="0" repeatcount="1" repeatto="0" sid="6335096113204381" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C4\C4_walk1.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C4\C4_idle.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="4jump" pingpong="0" repeatcount="1" repeatto="0" sid="7233093147022522" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C4\C4_jump.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="4hurt" pingpong="0" repeatcount="1" repeatto="0" sid="8805878854276506" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C4\C4_hit.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="0" name="4die" pingpong="0" repeatcount="1" repeatto="0" sid="8529630807271265" speed="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C4\C4_death1.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C4\C4_death2.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C4\C4_death3.png">
+                            <collision-poly>
+                                <point x="0.0594065" y="0.241313" />
+                                <point x="0.250825" y="0.0386101" />
+                                <point x="0.661716" y="0.0386102" />
+                                <point x="0.891088" y="0.276062" />
+                                <point x="0.726073" y="0.5" />
+                                <point x="0.727722" y="1" />
+                                <point x="0.148515" y="1" />
+                                <point x="0.151815" y="0.498069" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </animation-folder>
+        </object-type>
+        <object-type name="p1_pellets" sid="5816637560523363">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="4386119072196049">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="3604791012666922">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6959673737618724" speed="5">
+                    <frame duration="1" hotspotX="0.502262" hotspotY="0.5" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\C0\C0_pellet1.png">
+                        <collision-poly>
+                            <point x="0.0180995" y="0.047619" />
+                            <point x="0.497738" y="0.0119048" />
+                            <point x="0.904977" y="0.25" />
+                            <point x="0.959276" y="0.5" />
+                            <point x="0.914027" y="0.77381" />
+                            <point x="0.497738" y="1" />
+                            <point x="0.0271493" y="0.928571" />
+                            <point x="0.00452489" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="zombie" sid="3484467254039202">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="0left, 1right" name="dir" sid="3419570797712885" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="8924508713722803">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="1996568578692624">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="544551376119451">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7353116297033665" speed="7">
+                    <frame duration="1" hotspotX="0.501661" hotspotY="0.5" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\Z0\Z0_walk1.png">
+                        <collision-poly>
+                            <point x="0.4375" y="0.21875" />
+                            <point x="0.5625" y="0.21875" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.75" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500963" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\Z0\Z0_walk2.png">
+                        <collision-poly>
+                            <point x="0.4375" y="0.21875" />
+                            <point x="0.5625" y="0.21875" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.75" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501661" hotspotY="0.5" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\Z0\Z0_ walk3.png">
+                        <collision-poly>
+                            <point x="0.126246" y="0.071161" />
+                            <point x="0.498339" y="0.00187266" />
+                            <point x="0.797342" y="0.114232" />
+                            <point x="0.996678" y="0.5" />
+                            <point x="0.797342" y="0.885768" />
+                            <point x="0.0531561" y="0.970037" />
+                            <point x="0.0664452" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="healthBar" sid="1611082510161547">
+            <plugin id="progressbar" />
+            <behaviors>
+                <behavior-type name="Pin" sid="1370697079169498">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="chmenu_" sid="1608282318826306">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3134787464798591" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\menus\chmenu\chmenu_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\menus\chmenu\chmenu_2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\menus\chmenu\chmenu_3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\menus\chmenu\chmenu_3x.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\menus\chmenu\chmenu_4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\menus\chmenu\chmenu_6.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="charframes" sid="6905313869918628">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="7" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="6841044563057843" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\sprites\p1\p1_idle.png">
+                        <image-point name="shoot" x="0.9375" y="0.59375" />
+                        <collision-poly>
+                            <point x="0.4375" y="0.21875" />
+                            <point x="0.5" y="0.21875" />
+                            <point x="0.625" y="0.1875" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.75" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C2\C2_idle.png">
+                        <collision-poly>
+                            <point x="0.4375" y="0.21875" />
+                            <point x="0.5" y="0.1875" />
+                            <point x="0.625" y="0.1875" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.75" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3B\C3B_idle.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.75" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C3A\C3A_idle.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.25" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.75" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\C4\C4_idle.png">
+                        <collision-poly>
+                            <point x="0.4375" y="0.21875" />
+                            <point x="0.5" y="0.1875" />
+                            <point x="0.625" y="0.1875" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.75" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\Construct 2 Games\cheapvaca\cheap_vacation\textures\characters\S1\S1_idle.png">
+                        <collision-poly>
+                            <point x="0.625" y="0.3125" />
+                            <point x="0.5" y="0.3125" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.3125" y="0.65625" />
+                            <point x="0.6875" y="0.65625" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="vacationButton" sid="7404873840619073">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4385638178941208" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="8772976473097955">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1148114022678263" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="normaltext2" sid="285178464305717">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="8384484296502061">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Sprite2" sid="3303404235803788">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="562250245443309" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\Map_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\map_2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\map_3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\map_4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\map_5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\map_6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\map_7.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\map_8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\map_9.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\map_10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\map_11.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hud_health" sid="8862420250647423">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="5565467828711947">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="hud_score" sid="576667103045913">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="5439886888697935">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="store" sid="995937782098217">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6286037355965013" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shopkeeper" sid="6856518140863069">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="2 - 5" name="index" sid="7393370211800791" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4666394148550076" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500898" original-source="F:\keepinitlow\img\Character\NPC\NPC1.PNG">
+                        <collision-poly>
+                            <point x="0.166667" y="0.0825853" />
+                            <point x="0.5" y="0.0251346" />
+                            <point x="0.778986" y="0.109515" />
+                            <point x="0.942029" y="0.499102" />
+                            <point x="0.876812" y="0.938959" />
+                            <point x="0.137681" y="0.931777" />
+                            <point x="0.108696" y="0.499102" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="dialouge" sid="3378750117362943">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3702666709886996" speed="5">
+                    <frame duration="1" hotspotX="0.501493" hotspotY="0.502618" original-source="C:\Users\Liam\Downloads\dialouge.gif">
+                        <collision-poly>
+                            <point x="0.20743" y="0.380682" />
+                            <point x="0.498452" y="0.113636" />
+                            <point x="0.77709" y="0.409091" />
+                            <point x="0.767802" y="0.5" />
+                            <point x="0.755418" y="0.551136" />
+                            <point x="0.498452" y="0.744318" />
+                            <point x="0.235294" y="0.568182" />
+                            <point x="0.210526" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="normaltext3" sid="6121464665551675">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="7710742321062204">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="normaltext4" sid="1976305567441343">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="1543521740867368">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="normaltext5" sid="3351563463790005">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="9747729584376232">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Function" sid="6976815016499364">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="grass" sid="2321673685239257">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="6940433309672413">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="F:\keepinitlow\Grass_rc.png" />
+        </object-type>
+        <object-type name="dirt" sid="2071082709619512">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="grab" sid="1415340683821353" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="7936817483799006">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="6069670401459312">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6767316557960211" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\Assets\gurder.png">
+                        <image-point name="edge" x="0.0662252" y="0" />
+                        <image-point name="edge2" x="0.933775" y="0" />
+                        <image-point name="edge3" x="0.0662252" y="1" />
+                        <image-point name="edge4" x="0.933775" y="1" />
+                        <image-point name="edge_h" x="0" y="0.5" />
+                        <image-point name="edge_h2" x="1" y="0.5" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ladder" sid="17459641644838">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7982297828132087" speed="5">
+                    <frame duration="1" hotspotX="0.502128" hotspotY="0.5" original-source="F:\keepinitlow\img\Assets\ladder.png">
+                        <collision-poly>
+                            <point x="0.0170213" y="0.00921659" />
+                            <point x="0.497872" y="0.078341" />
+                            <point x="0.902128" y="0.0529954" />
+                            <point x="0.978723" y="0.5" />
+                            <point x="0.987234" y="0.993088" />
+                            <point x="0.497872" y="0.917051" />
+                            <point x="0.0425532" y="0.976959" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="crate" sid="7783882029717035">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="4327870205126935">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+                <behavior-type name="Physics" sid="7965305430506461">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="5298121959889904">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3168403540876416" speed="5">
+                    <frame duration="1" hotspotX="0.501266" hotspotY="0.501279" original-source="F:\keepinitlow\img\Assets\Crate1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="1up" sid="4732453746622885">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3806997611254087" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="gurder" sid="3516552293998571">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="2511158110375311">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="F:\keepinitlow\img\Assets\gurder_c.png" />
+        </object-type>
+        <object-type name="candy" sid="5717343265474688">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5302290607112745" speed="5">
+                    <frame duration="1" hotspotX="0.501873" hotspotY="0.5" original-source="F:\keepinitlow\img\Items\Candy.png">
+                        <collision-poly>
+                            <point x="0.149813" y="0.15873" />
+                            <point x="0.498127" y="0.0119048" />
+                            <point x="0.850187" y="0.15873" />
+                            <point x="0.996255" y="0.5" />
+                            <point x="0.857678" y="0.849206" />
+                            <point x="0.498127" y="1" />
+                            <point x="0.116105" y="0.876984" />
+                            <point x="0.00374532" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="normaltext6" sid="1348225783674815">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="265165724349293">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="pizza" sid="7119476583661194">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2889409799267876" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\Items\Pizza.png">
+                        <collision-poly>
+                            <point x="0.15894" y="0.16" />
+                            <point x="0.5" y="0.00333333" />
+                            <point x="0.940397" y="0.06" />
+                            <point x="0.738411" y="0.5" />
+                            <point x="0.629139" y="0.626667" />
+                            <point x="0.5" y="0.756667" />
+                            <point x="0.0331126" y="0.966667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sandwich" sid="3956794762373488">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7600030342193103" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\Items\Sandwich.png">
+                        <collision-poly>
+                            <point x="0.0776398" y="0.119048" />
+                            <point x="0.5" y="0.0047619" />
+                            <point x="0.900621" y="0.152381" />
+                            <point x="0.885093" y="0.5" />
+                            <point x="0.897516" y="0.842857" />
+                            <point x="0.5" y="0.995238" />
+                            <point x="0.0931677" y="0.857143" />
+                            <point x="0.124224" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Gun" sid="8025768032326369">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9827077892251289" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500901" original-source="F:\keepinitlow\img\Items\Gun2.png">
+                        <collision-poly>
+                            <point x="0.134831" y="0.0864865" />
+                            <point x="0.5" y="0.0198198" />
+                            <point x="0.671348" y="0.210811" />
+                            <point x="0.879214" y="0.499099" />
+                            <point x="0.901685" y="0.936937" />
+                            <point x="0.5" y="1" />
+                            <point x="0.210674" y="0.864865" />
+                            <point x="0.126404" y="0.499099" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Gun2" sid="5883565638073103">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4437181462147225" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\Items\Gun3.png">
+                        <collision-poly>
+                            <point x="0.134831" y="0.0866426" />
+                            <point x="0.5" y="0.0180505" />
+                            <point x="0.671348" y="0.211191" />
+                            <point x="0.879214" y="0.5" />
+                            <point x="0.901685" y="0.936823" />
+                            <point x="0.5" y="1" />
+                            <point x="0.213483" y="0.862816" />
+                            <point x="0.129213" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Owl" sid="1117210216091405">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9496962346423819" speed="5">
+                    <frame duration="1" hotspotX="0.501529" hotspotY="0.501493" original-source="F:\keepinitlow\img\Items\Owl.png">
+                        <collision-poly>
+                            <point x="0.201835" y="0.197015" />
+                            <point x="0.498471" y="0.0179104" />
+                            <point x="0.963303" y="0.0358209" />
+                            <point x="0.880734" y="0.498507" />
+                            <point x="0.905199" y="0.907463" />
+                            <point x="0.498471" y="0.997015" />
+                            <point x="0.0856269" y="0.916418" />
+                            <point x="0.201835" y="0.498507" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="array" sid="36624906874197">
+            <plugin id="Dictionary" />
+            <instance-variables>
+                <instance-variable comment="remaning space in inventory" name="space" sid="2344219849111861" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="normaltext7" sid="8344784412224854">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="5379264205189613">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="peppermint" sid="2280818579795338">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="NewText" sid="5453906328346962" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="5634464105059584">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="aiBlock" sid="1481946313976837">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4217975205596446" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cursor" sid="3366367515289592">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4983169419316409" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\cursor.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="zombie2" sid="3532357642521508">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="0left, 1right" name="dir" sid="6797352080915846" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="7060970990619914">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="1526283510128292">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="7218025509786638">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="2671588440295318">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5262968366830996" speed="7">
+                    <frame duration="1" hotspotX="0.501661" hotspotY="0.5" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\Z0\Z0_walk1.png">
+                        <collision-poly>
+                            <point x="0.4375" y="0.21875" />
+                            <point x="0.5625" y="0.21875" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.75" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500963" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\Z0\Z0_walk2.png">
+                        <collision-poly>
+                            <point x="0.4375" y="0.21875" />
+                            <point x="0.5625" y="0.21875" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.75" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.875" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501661" hotspotY="0.5" original-source="F:\keepinitlow\cheap_vacation_ver2.0\Character\Z0\Z0_ walk3.png">
+                        <collision-poly>
+                            <point x="0.126246" y="0.071161" />
+                            <point x="0.498339" y="0.00187266" />
+                            <point x="0.797342" y="0.114232" />
+                            <point x="0.996678" y="0.5" />
+                            <point x="0.797342" y="0.885768" />
+                            <point x="0.0531561" y="0.970037" />
+                            <point x="0.0664452" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="solid" sid="5007122967272033">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="6685962197266776">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="NoSave" sid="3815811066181155">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7510670890778898" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="edge_grab" sid="3844541518198507">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9212043214377465" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="hud_health2" sid="4504287526042698">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="3496912569396017">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="inventory_sq" sid="5691946338458207">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="8489129114604861">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6635192063214007" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\cursor.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inventory_sq2" sid="7027925348521817">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="5344517736653995">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2989572426015853" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\cursor.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inventory_sq3" sid="591268176692193">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="1337663398557125">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8804719035597854" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\cursor.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inventory_sq4" sid="5946513345772486">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="1200902116326658">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2192767585229823" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\cursor.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inventory_sq5" sid="6429649038037412">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="177940458711562">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1571593745653558" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\cursor.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="item_sq" sid="807640058165023">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="210946125293597">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="empty" pingpong="0" repeatcount="1" repeatto="0" sid="5069900856627966" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\cursor.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="pizza" pingpong="0" repeatcount="1" repeatto="0" sid="123235847354714" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\Items\Pizza.png">
+                        <collision-poly>
+                            <point x="0.15894" y="0.16" />
+                            <point x="0.5" y="0.00333333" />
+                            <point x="0.940397" y="0.06" />
+                            <point x="0.738411" y="0.5" />
+                            <point x="0.629139" y="0.626667" />
+                            <point x="0.5" y="0.756667" />
+                            <point x="0.0331126" y="0.966667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="sandwich" pingpong="0" repeatcount="1" repeatto="0" sid="3640621732160503" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\Items\Sandwich.png">
+                        <collision-poly>
+                            <point x="0.0776398" y="0.119048" />
+                            <point x="0.5" y="0.0047619" />
+                            <point x="0.900621" y="0.152381" />
+                            <point x="0.885093" y="0.5" />
+                            <point x="0.897516" y="0.842857" />
+                            <point x="0.5" y="0.995238" />
+                            <point x="0.0931677" y="0.857143" />
+                            <point x="0.124224" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="peppermint" pingpong="0" repeatcount="1" repeatto="0" sid="9826616369196149" speed="5">
+                    <frame duration="1" hotspotX="0.501873" hotspotY="0.5" original-source="F:\keepinitlow\img\Items\Candy.png">
+                        <collision-poly>
+                            <point x="0.149813" y="0.15873" />
+                            <point x="0.498127" y="0.0119048" />
+                            <point x="0.850187" y="0.15873" />
+                            <point x="0.996255" y="0.5" />
+                            <point x="0.857678" y="0.849206" />
+                            <point x="0.498127" y="1" />
+                            <point x="0.116105" y="0.876984" />
+                            <point x="0.00374532" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="item_sq2" sid="3178244096269377">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="1288138658767703">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="empty" pingpong="0" repeatcount="1" repeatto="0" sid="1893000323847168" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\cursor.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="pizza" pingpong="0" repeatcount="1" repeatto="0" sid="9633932255000765" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\Items\Pizza.png">
+                        <collision-poly>
+                            <point x="0.15894" y="0.16" />
+                            <point x="0.5" y="0.00333333" />
+                            <point x="0.940397" y="0.06" />
+                            <point x="0.738411" y="0.5" />
+                            <point x="0.629139" y="0.626667" />
+                            <point x="0.5" y="0.756667" />
+                            <point x="0.0331126" y="0.966667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="sandwich" pingpong="0" repeatcount="1" repeatto="0" sid="6139245026709036" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="F:\keepinitlow\img\Items\Sandwich.png">
+                        <collision-poly>
+                            <point x="0.0776398" y="0.119048" />
+                            <point x="0.5" y="0.0047619" />
+                            <point x="0.900621" y="0.152381" />
+                            <point x="0.885093" y="0.5" />
+                            <point x="0.897516" y="0.842857" />
+                            <point x="0.5" y="0.995238" />
+                            <point x="0.0931677" y="0.857143" />
+                            <point x="0.124224" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="peppermint" pingpong="0" repeatcount="1" repeatto="0" sid="7727257116676367" speed="5">
+                    <frame duration="1" hotspotX="0.501873" hotspotY="0.5" original-source="F:\keepinitlow\img\Items\Candy.png">
+                        <collision-poly>
+                            <point x="0.149813" y="0.15873" />
+                            <point x="0.498127" y="0.0119048" />
+                            <point x="0.850187" y="0.15873" />
+                            <point x="0.996255" y="0.5" />
+                            <point x="0.857678" y="0.849206" />
+                            <point x="0.498127" y="1" />
+                            <point x="0.116105" y="0.876984" />
+                            <point x="0.00374532" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>title.xml</layout>
+        <layout>l1.xml</layout>
+        <layout>char.xml</layout>
+        <layout>level_select.xml</layout>
+        <layout>l1_store.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>_title.xml</event-sheet>
+        <event-sheet>_l1.xml</event-sheet>
+        <event-sheet>_char.xml</event-sheet>
+        <event-sheet>_level_select.xml</event-sheet>
+        <event-sheet>_l1_store.xml</event-sheet>
+        <event-sheet>_typewrite.xml</event-sheet>
+        <event-sheet>_shop.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="WebStorage" uid="1" />
+        <global-instance type="Gamepad" uid="2">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="7" />
+        <global-instance type="Function" uid="36" />
+    </global-instances>
+    <sounds-folder>
+        <file name="boom.m4a" />
+        <file name="boom.ogg" />
+        <file name="def.m4a" />
+        <file name="def.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

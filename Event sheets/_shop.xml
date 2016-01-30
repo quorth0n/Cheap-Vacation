@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_shop</name>
+    <events>
+        <variable constant="0" name="last_transaction" sid="8227119577949511" static="0" type="number">0</variable>
+        <event-block sid="8334483335132513">
+            <conditions>
+                <condition id="0" name="On function" sid="8423624640721561" type="Function">
+                    <param id="0" name="Name">&quot;buy&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2910702360946558">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4219920244039375" type="array">
+                            <param id="0" name="Instance variable">space</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7271544806947886">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6947712883776027" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;l1_store&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="2090265154103824" type="peppermint">
+                                    <param id="0" name="Instance variable">NewText</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="1138797698110977" type="peppermint">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="6752833415878361">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="7080693356441966" type="cursor">
+                                            <param id="0" name="Object">pizza</param>
+                                        </condition>
+                                        <condition id="-9" name="Layer is visible" sid="8730236269604318" type="System">
+                                            <param id="0" name="Layer">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="1520711013104016" type="array">
+                                            <param id="0" name="Key">&quot;i&quot; &amp; array.space</param>
+                                            <param id="1" name="Value">&quot;pizza&quot;</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="7085247644301469" type="array">
+                                            <param id="0" name="Instance variable">space</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="2227381882057521" type="System">
+                                            <param id="0" name="Variable">cash</param>
+                                            <param id="1" name="Value">10</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1427039221613854" type="System">
+                                            <param id="0" name="Variable">last_transaction</param>
+                                            <param id="1" name="Value">10</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="5651486276875464" type="Function">
+                                            <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;There ya go, one pizza.&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6370408757024185">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="4920038445551663" type="cursor">
+                                            <param id="0" name="Object">sandwich</param>
+                                        </condition>
+                                        <condition id="-9" name="Layer is visible" sid="6889054624910105" type="System">
+                                            <param id="0" name="Layer">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="9372949653032529" type="array">
+                                            <param id="0" name="Key">&quot;i&quot; &amp; array.space</param>
+                                            <param id="1" name="Value">&quot;sandwich&quot;</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="3407420602912666" type="array">
+                                            <param id="0" name="Instance variable">space</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="7856427958052624" type="System">
+                                            <param id="0" name="Variable">cash</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7493736160068082" type="System">
+                                            <param id="0" name="Variable">last_transaction</param>
+                                            <param id="1" name="Value">15</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="7526755677552107" type="Function">
+                                            <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;There ya go, one sandwich.&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7457888501884491">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="3567751657752414" type="cursor">
+                                            <param id="0" name="Object">candy</param>
+                                        </condition>
+                                        <condition id="-9" name="Layer is visible" sid="3392496285343026" type="System">
+                                            <param id="0" name="Layer">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="7663254553585356" type="array">
+                                            <param id="0" name="Key">&quot;i&quot; &amp; array.space</param>
+                                            <param id="1" name="Value">&quot;pizza&quot;</param>
+                                        </action>
+                                        <action id="-12" name="Subtract from" sid="3456285140617302" type="array">
+                                            <param id="0" name="Instance variable">space</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="3725460779806875" type="System">
+                                            <param id="0" name="Variable">cash</param>
+                                            <param id="1" name="Value">150</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3533840305456429" type="System">
+                                            <param id="0" name="Variable">last_transaction</param>
+                                            <param id="1" name="Value">150</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="2068787986798185" type="Function">
+                                            <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;There ya go, one...&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="7425871448752535" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="4890027003350493" type="normaltext">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="6226515220795615" type="normaltext">
+                                            <param id="0" name="Instance variable">NewText</param>
+                                            <param id="1" name="Value">&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="4359697632991883" type="peppermint">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="754359084729172" type="peppermint">
+                                            <param id="0" name="Instance variable">NewText</param>
+                                            <param id="1" name="Value">&quot;P E P P E R M I N T&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2138773030776018">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7847879047109039" type="array">
+                            <param id="0" name="Instance variable">space</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5617919792287665" type="Function">
+                            <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;There&apos;s not enough inventory space for that&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8140235369626084">
+            <conditions>
+                <condition id="0" name="On function" sid="2911711847764488" type="Function">
+                    <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3454314239856928" type="normaltext">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="8931972179840801" type="normaltext">
+                    <param id="0" name="Instance variable">NewText</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3423503052530706">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7308220605812613" type="System">
+                            <param id="0" name="Variable">cash</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="5481775448287006" type="System">
+                            <param id="0" name="Variable">cash</param>
+                            <param id="1" name="Value">last_transaction</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="4129921494461566" type="array">
+                            <param id="0" name="Instance variable">space</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="6708398133807018" type="array">
+                            <param id="0" name="Key">&quot;i&quot; &amp; array.space</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="408708665418093" type="System">
+                            <param id="0" name="Variable">last_transaction</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4097083646900512" type="Function">
+                            <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;You don&apos;t have enough money for that&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3350726069557729">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="4581188679209977" type="System">
+                    <param id="0" name="Interval (seconds)">0.055</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="9913866989595039" type="normaltext">
+                    <param id="0" name="Instance variable">NewText</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Append text" sid="9332685940757571" type="normaltext">
+                    <param id="0" name="Text">left(normaltext.NewText, 1)</param>
+                </action>
+                <action id="-10" name="Set value" sid="9865809499007523" type="normaltext">
+                    <param id="0" name="Instance variable">NewText</param>
+                    <param id="1" name="Value">right(Self.NewText, len(Self.NewText)-1)</param>
+                </action>
+                <action id="0" name="Play" sid="8479927360666639" type="Audio">
+                    <param id="0" name="Audio file">def</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;def&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5899958721627307">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="5981477952145584" type="System">
+                    <param id="0" name="Interval (seconds)">0.055</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="5067728244085329" type="peppermint">
+                    <param id="0" name="Instance variable">NewText</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Append text" sid="4965186631766742" type="peppermint">
+                    <param id="0" name="Text">left(peppermint.NewText, 1)</param>
+                </action>
+                <action id="-10" name="Set value" sid="3860430544774329" type="peppermint">
+                    <param id="0" name="Instance variable">NewText</param>
+                    <param id="1" name="Value">right(Self.NewText, len(Self.NewText)-1)</param>
+                </action>
+                <action id="0" name="Play" sid="4918971137395034" type="Audio">
+                    <param id="0" name="Audio file">def</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;def&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9976323442100929">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="1426047192440396" type="System">
+                    <param id="0" name="Interval (seconds)">0.3</param>
+                </condition>
+                <condition id="0" inverted="1" name="Compare text" sid="6260922053359401" type="peppermint">
+                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set font color" sid="4758494082550966" type="peppermint">
+                    <param id="0" name="Color">rgb(random(0, 255), random(0, 255), random(0, 255))</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

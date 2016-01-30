@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_title</name>
+    <events>
+        <event-block sid="6269651278889161">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="9569631781125485" type="System">
+                    <param id="0" name="Interval (seconds)">0.05</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="3342194106901228" type="System">
+                    <param id="0" name="First value">normaltext.FaceSize</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">55</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set font size" sid="8399681708726031" type="normaltext">
+                    <param id="0" name="Size (pt)">normaltext.FaceSize + 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5873276425347723">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4990027278493035" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="8784754280285145" type="Audio">
+                    <param id="0" name="Audio file">boom</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">10</param>
+                    <param id="1" name="Tag (optional)">&quot;boom&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="7745701020834961" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="1871022997318397" type="normaltext2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9562441005602003">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="5474129474154985" type="Keyboard" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="499941920774578" type="System">
+                    <param id="0" name="Layout">char</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

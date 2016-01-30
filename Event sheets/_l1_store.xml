@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_l1_store</name>
+    <events>
+        <include>_shop</include>
+        <event-block sid="8952083324572452">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9715062112242963" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="1100679851857588" type="Function">
+                    <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Hello.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3657053869016779">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="6331889160442612" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="7992422533002095" type="shopkeeper">
+                    <param id="0" name="Instance variable">index</param>
+                    <param id="1" name="Value">(shopkeeper.index + 1 &lt;= 5) ? shopkeeper.index + 1 : 2</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="1536961406645013">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4749548262405604" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="5248421095984475" type="normaltext2">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="222982874569398" type="normaltext3">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="9331601462789315" type="normaltext4">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="2487505940614828" type="normaltext5">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5443589066437463">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6197314838288111" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9129965549056104" type="normaltext3">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="7288976002237564" type="normaltext2">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="46831917885978" type="normaltext4">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="5602726973157677" type="normaltext5">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7607002480895213">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6065203140059781" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="8045270227522061" type="normaltext4">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="9901978506542089" type="normaltext3">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="267902748367831" type="normaltext2">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="7923979782090716" type="normaltext5">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5844223939097184">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5440991738421308" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9778688012984618" type="normaltext5">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="4285433694188567" type="normaltext3">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="7509993544477565" type="normaltext4">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="3137633129444178" type="normaltext2">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4648454797310582">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7777280640708839" type="Keyboard">
+                    <param id="0" name="Key">90 (Z)</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="2455735118664078" type="System">
+                    <param id="0" name="Layer">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="2386495814332526" type="Function">
+                    <param id="0" name="Name">&quot;buy&quot;</param>
+                    <param id="1" name="Parameter {n}">LayoutName{###}Keyboard.LastKeyCode</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8946316344182157">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="9353444221346141" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="2340786793297353" type="shopkeeper">
+                    <param id="0" name="Instance variable">index</param>
+                    <param id="1" name="Value">(shopkeeper.index - 1 &gt;= 2) ? shopkeeper.index - 1 : 5</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4146713549956307">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6327658762792916" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="3817081027358436" type="normaltext2">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="6902227092998569" type="normaltext3">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="1329745653624933" type="normaltext4">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="1590688669138781" type="normaltext5">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8393689937847497">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7466268585360975" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="1143050455962683" type="normaltext3">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="6502141029716766" type="normaltext2">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="6693812365805389" type="normaltext4">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="2674602648486476" type="normaltext5">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7593884936766886">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4326847575711533" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="9989034437992739" type="normaltext4">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="1804061678794181" type="normaltext3">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="4974391958555052" type="normaltext2">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="5482805633097605" type="normaltext5">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1476036726443694">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5003289223789001" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="5590807949181405" type="normaltext5">
+                            <param id="0" name="Color">rgb(0, 255, 0)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="7798977799641887" type="normaltext3">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="197812605006051" type="normaltext4">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                        <action id="4" name="Set font color" sid="1343614207835508" type="normaltext2">
+                            <param id="0" name="Color">rgb(255, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5516148935975777">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4696949974375961" type="Keyboard">
+                    <param id="0" name="Key">90 (Z)</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Layer is visible" sid="4925489330887622" type="System">
+                    <param id="0" name="Layer">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Buy</comment>
+                <event-block sid="8509656956959345">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1746873283339627" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6263979521229539" type="normaltext2">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8052932808119512" type="normaltext3">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2387402562705529" type="normaltext4">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6384300473745568" type="normaltext5">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="8576469177360361" type="Function">
+                            <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;what will it be? (use arrows)&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9410105873415088" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="249449062708979" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Sell</comment>
+                <event-block sid="722335380852119">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3985766810128626" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2772823740849188" type="Function">
+                            <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;ehh i dont rely need anything thanks tho&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Talk</comment>
+                <event-block sid="9745504723745058">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3619020588030053" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8711790520313893" type="Function">
+                            <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;uh yea sry i cant rely talk rn&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="42661086075402" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7656453167381739" type="Function">
+                            <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;idk maybe later tho&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Leave</comment>
+                <event-block sid="7481610279642194">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1056596309606728" type="shopkeeper">
+                            <param id="0" name="Instance variable">index</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5355431224915774" type="Function">
+                            <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;cya &apos;round.&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="5282191434399161" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="5362917904647058" type="System">
+                            <param id="0" name="Layout">l1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2571088619557846">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2855347733710176" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="720083499780898" type="normaltext7">
+                    <param id="0" name="Text">&quot;$&quot; &amp; cash</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3289452903725113">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5606857424380793" type="cursor">
+                    <param id="0" name="Object">candy</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="415027682374789" type="System">
+                    <param id="0" name="Layer">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3078210427161877" type="normaltext6">
+                    <param id="0" name="Text">&quot;Peppermint Candy ~ The sugary product of all things holy. Stolen from that one Mexican restaurant that has a bowl of these by the door. May its godly powers be unleashed upon the zombies!&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="475191056547357" type="Function">
+                    <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;that&apos;ll be $150 (mhm)&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5189226068103993">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="452729013370407" type="cursor">
+                    <param id="0" name="Object">sandwich</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="8903120298575752" type="System">
+                    <param id="0" name="Layer">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="9104821695209312" type="normaltext6">
+                    <param id="0" name="Text">&quot;Sandwich Cookie Sandwich ~ Yes, you heard us right: A chocolate sandwich cookie, lettuce, and tomato between two slices of white. Perfect for reflecting on bad decisions you made as a kid. Now served with sour candy off the ground and extra mayo.&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="9298008198118484" type="Function">
+                    <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;that&apos;ll be $15&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3266015895989771">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2105640027417816" type="cursor">
+                    <param id="0" name="Object">pizza</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="6249786672071086" type="System">
+                    <param id="0" name="Layer">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="4785945194688947" type="normaltext6">
+                    <param id="0" name="Text">&quot;Crispy Rice Pizza ~ Rice cereal, marshmallow, and pizza with a crust that more resembles cardboard than pizza crust. Doesn’t taste as bad as it sounds.&quot;</param>
+                </action>
+                <action id="0" name="Call function" sid="8541498640739256" type="Function">
+                    <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;that&apos;ll be $10&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="815463333260515">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4881524740937273" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="627941281234593" type="cursor">
+                    <param id="0" name="X">(cursor.X - 200 &lt; 750) ? 1190 : cursor.X - 200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8332190173776154">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3944159933738078" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="4779006545510302" type="cursor">
+                    <param id="0" name="X">(cursor.X + 200 &gt; 1190) ? 790 : cursor.X + 200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="570552973721638">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3947381511298819" type="Keyboard">
+                    <param id="0" name="Key">88 (X)</param>
+                </condition>
+                <condition id="-9" name="Layer is visible" sid="8172749667873148" type="System">
+                    <param id="0" name="Layer">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="3366037146667867" type="normaltext2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2272121291867508" type="normaltext3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9559405763631892" type="normaltext4">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6846177285727767" type="normaltext5">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Call function" sid="3250798761040341" type="Function">
+                    <param id="0" name="Name">&quot;typewrite_nt&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Hello.&quot;</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="5324083835151971" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2527791995255118">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5219467297997947" type="Keyboard">
+                    <param id="0" name="Key">88 (X)</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Layer is visible" sid="7743792136079859" type="System">
+                    <param id="0" name="Layer">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="922559101471173" type="shopkeeper">
+                    <param id="0" name="Instance variable">index</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="4" name="Set font color" sid="1287082478731206" type="normaltext5">
+                    <param id="0" name="Color">rgb(0, 255, 0)</param>
+                </action>
+                <action id="4" name="Set font color" sid="1891091866043105" type="normaltext3">
+                    <param id="0" name="Color">rgb(255, 255, 255)</param>
+                </action>
+                <action id="4" name="Set font color" sid="1455724913952879" type="normaltext4">
+                    <param id="0" name="Color">rgb(255, 255, 255)</param>
+                </action>
+                <action id="4" name="Set font color" sid="6118097543633394" type="normaltext2">
+                    <param id="0" name="Color">rgb(255, 255, 255)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

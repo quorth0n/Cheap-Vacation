@@ -1,0 +1,1388 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_l1</name>
+    <events>
+        <variable constant="0" name="cash" sid="7638394110845943" static="0" type="number">200</variable>
+        <variable constant="0" name="pts" sid="6597089215596204" static="0" type="number">0</variable>
+        <event-block sid="5846815110260094">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6990610945804493" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="4779527978867122" type="p1_idle" />
+                <action behavior="Pin" id="0" name="Pin to object" sid="3739177811039436" type="healthBar">
+                    <param id="0" name="Pin to">p1_idle</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="0" name="Set cursor style" sid="7116200402228213" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="5452014674303098" type="zombie2">
+                    <param id="0" name="Duration">random(0.3, 1)</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;jump&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4863002781618975">
+            <conditions>
+                <condition id="1" name="Compare progress" sid="2620362644152711" type="healthBar">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="849178357768569" type="p1_idle">
+                    <param id="0" name="Instance variable">deadhurt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="2718124980405766" type="p1_idle">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="1605144729017266" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;die&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="3315817266192319" type="System">
+                    <param id="0" name="Seconds">6</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="9394652680389282" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="5110856620883265">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="52606125130948" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2451390061447067" type="p1_idle">
+                    <param id="0" name="Instance variable">deadhurt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="7110945201744721" type="p1_idle">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="7450915623999283" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="838729140707824" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="9226344812706679" type="p1_idle">
+                    <param id="0" name="Instance variable">falling</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="2420252766036895" type="System">
+                    <param id="0" name="Seconds">0.15</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="1738199229849396" type="p1_idle">
+                    <param id="0" name="Instance variable">falling</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7522341812761577">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="9089696122204458" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6837428317066536" type="p1_idle">
+                    <param id="0" name="Instance variable">deadhurt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="408830013453387" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6274582919688129" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="4045052241035097" type="p1_idle">
+                    <param id="0" name="Instance variable">falling</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="1644260819551817" type="System">
+                    <param id="0" name="Seconds">0.15</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="7704955116524023" type="p1_idle">
+                    <param id="0" name="Instance variable">falling</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1162977852855343">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1620459132208252" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6981090598219322" type="p1_idle">
+                    <param id="0" name="Instance variable">deadhurt</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="5200037324849092" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;grab&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="7401447282438818" type="p1_idle">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7011434357747239">
+            <conditions>
+                <condition id="2" name="Key is down" sid="4531070676725435" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="4926595908821137" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;grab&quot;</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1584623852065282" type="p1_idle">
+                    <param id="0" name="Instance variable">deadhurt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="4522251631844009" type="p1_idle">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="1347257973306421">
+            <conditions>
+                <condition id="2" name="Key is down" sid="9055282749503912" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="16575068343975" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2755035766473245">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Key is down" sid="755411137904614" type="Keyboard">
+                            <param id="0" name="Key">16 (Shift)</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5688950471223176" type="p1_idle">
+                            <param id="0" name="Instance variable">deadhurt</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9963049319910526" type="p1_idle">
+                            <param id="0" name="Instance variable">climbing</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6651314155667077" type="p1_idle">
+                            <param id="0" name="Animation">char &amp; &quot;walk1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="3488232987898334" type="p1_idle">
+                            <param id="0" name="Max Speed">330</param>
+                        </action>
+                        <action behavior="Platform" id="3" name="Set deceleration" sid="1571304031482574" type="p1_idle">
+                            <param id="0" name="Deceleration">1500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5847020578997241">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="9529641922014499" type="Keyboard">
+                            <param id="0" name="Key">16 (Shift)</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5363606751055443" type="p1_idle">
+                            <param id="0" name="Instance variable">deadhurt</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3522204768161037" type="p1_idle">
+                            <param id="0" name="Instance variable">climbing</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2120716031170383" type="p1_idle">
+                            <param id="0" name="Animation">char &amp; &quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="75645196112911" type="p1_idle">
+                            <param id="0" name="Max Speed">600</param>
+                        </action>
+                        <action behavior="Platform" id="3" name="Set deceleration" sid="1009343101898112" type="p1_idle">
+                            <param id="0" name="Deceleration">3000</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4341223028133971">
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="6642602224698591" type="p1_idle" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5137947894137623" type="p1_idle">
+                    <param id="0" name="Instance variable">deadhurt</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3616833001674582" type="p1_idle">
+                    <param id="0" name="Instance variable">climbing</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9331548486373836" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;idle&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="8033097844443985">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="546120561112179" type="p1_idle" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8418649761746605" type="p1_idle">
+                    <param id="0" name="Instance variable">deadhurt</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1578722118473245" type="p1_idle">
+                    <param id="0" name="Instance variable">falling</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2304792016596701" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="9874382172416146">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="461236210929874" type="p1_idle">
+                    <param id="0" name="Instance variable">falling</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9415125140013343" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;hurt&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4762146137917293">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="656585811496033" type="Keyboard">
+                    <param id="0" name="Key">88 (X)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="9307996879623485" type="p1_idle">
+                    <param id="0" name="Object">p1_pellets</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="1950196867102119" type="System">
+                    <param id="0" name="Variable">pts</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6931233037218781">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="8286309459440966" type="p1_idle" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="7953541513530673" type="p1_pellets">
+                            <param id="0" name="Speed">-300</param>
+                        </action>
+                        <action id="8" name="Set flipped" sid="9732397383877144" type="p1_pellets">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7661064678468925">
+                    <conditions>
+                        <condition id="2" inverted="1" name="Key is down" sid="1966147023408897" type="Keyboard">
+                            <param id="0" name="Key">16 (Shift)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="4525286485517634" type="p1_idle">
+                            <param id="0" name="Instance variable">deadhurt</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1952238731245247" type="p1_idle">
+                            <param id="0" name="Animation">char &amp; &quot;shoot&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="1803078918076178" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="1601055739597455" type="p1_idle">
+                            <param id="0" name="Instance variable">deadhurt</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5707102334639582">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="6846918306080496" type="Keyboard">
+                            <param id="0" name="Key">16 (Shift)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="2652916748679378" type="p1_idle">
+                            <param id="0" name="Instance variable">deadhurt</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1440122516109889" type="p1_idle">
+                            <param id="0" name="Animation">char &amp; &quot;rShoot&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="419889293290016" type="System">
+                            <param id="0" name="Seconds">0.4</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="3249254897527389" type="p1_idle">
+                            <param id="0" name="Instance variable">deadhurt</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="6794268775606318" title="AI" />
+        <comment>Zombie</comment>
+        <event-block sid="9639729598004371">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1107757274259748" type="p1_idle">
+                    <param id="0" name="Object">zombie</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="9546114085373261" type="p1_idle">
+                    <param id="0" name="Instance variable">deadhurt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="5680860057126672" type="p1_idle">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="4299793486818646" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;hurt&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="3" name="Set progress" sid="7679201109954132" type="healthBar">
+                    <param id="0" name="Value">healthBar.Progress - 1</param>
+                </action>
+                <action id="0" name="Set text" sid="2020283924680855" type="hud_health">
+                    <param id="0" name="Text">&quot;Health: &quot; &amp; healthBar.Progress &amp; &quot; \ 10&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="221558075631878" type="System">
+                    <param id="0" name="Seconds">0.9</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="6663764280269077" type="p1_idle">
+                    <param id="0" name="Instance variable">deadhurt</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6348794180678319">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8257487103210661" type="p1_pellets">
+                    <param id="0" name="Object">zombie</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="4613055797265428" type="System">
+                    <param id="0" name="Variable">pts</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+                <action id="-9" name="Destroy" sid="8672848128184053" type="p1_pellets" />
+                <action id="-9" name="Destroy" sid="7956651825560629" type="zombie" />
+            </actions>
+        </event-block>
+        <event-block sid="7021987439739497">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="5690140782208965" type="zombie" />
+                <condition id="-7" name="Compare instance variable" sid="2415577544513879" type="zombie">
+                    <param id="0" name="Instance variable">dir</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="8326018483322025" type="zombie">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="547532086672543" type="zombie">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2327867717832723">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="4952883206089102" type="zombie" />
+                <condition id="-7" name="Compare instance variable" sid="7398326929276157" type="zombie">
+                    <param id="0" name="Instance variable">dir</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="821162197014226" type="zombie">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="2864687532820586" type="zombie">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6579453286283021">
+            <conditions>
+                <condition behavior="Platform" id="10" name="Is by wall" sid="689554005842477" type="zombie">
+                    <param id="0" name="Side">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="7440844267142091" type="zombie">
+                    <param id="0" name="Instance variable">dir</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7485433416580454">
+            <conditions>
+                <condition behavior="Platform" id="10" name="Is by wall" sid="9009622475951111" type="zombie">
+                    <param id="0" name="Side">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6541854392363635" type="zombie">
+                    <param id="0" name="Instance variable">dir</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="389410082625883">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3696493627477847" type="zombie">
+                    <param id="0" name="Object">aiBlock</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="3822177493575412" type="zombie">
+                    <param id="0" name="Instance variable">dir</param>
+                    <param id="1" name="Value">(zombie.dir=0) ? 1 : 0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9082052942476058">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3224245914650415" type="p1_idle">
+                    <param id="0" name="Object">zombie2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="1619688770194598" type="p1_idle">
+                    <param id="0" name="Instance variable">deadhurt</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="1900341562151072" type="p1_idle">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="9061135088186279" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;hurt&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="3" name="Set progress" sid="7573890223737121" type="healthBar">
+                    <param id="0" name="Value">healthBar.Progress - 1</param>
+                </action>
+                <action id="0" name="Set text" sid="3399827283263564" type="hud_health">
+                    <param id="0" name="Text">&quot;Health: &quot; &amp; healthBar.Progress &amp; &quot; \ 10&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="2323732269772656" type="System">
+                    <param id="0" name="Seconds">0.9</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="1426897410872907" type="p1_idle">
+                    <param id="0" name="Instance variable">deadhurt</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2983842391411158">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="2048850210928945" type="p1_pellets">
+                    <param id="0" name="Object">zombie2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="8864155132834819" type="System">
+                    <param id="0" name="Variable">pts</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+                <action id="-9" name="Destroy" sid="4648598486480663" type="p1_pellets" />
+                <action id="-9" name="Destroy" sid="402648533559775" type="zombie2" />
+            </actions>
+        </event-block>
+        <event-block sid="1150629061892749">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="8493925561859201" type="zombie2" />
+                <condition id="-7" name="Compare instance variable" sid="9310209887781572" type="zombie2">
+                    <param id="0" name="Instance variable">dir</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="2501278807522262" type="zombie2">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="7823933627472036" type="zombie2">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6076990735292199">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="7156346548002929" type="zombie2" />
+                <condition id="-7" name="Compare instance variable" sid="8674042388397343" type="zombie2">
+                    <param id="0" name="Instance variable">dir</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="5069839710460762" type="zombie2">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="3377964404021835" type="zombie2">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1432556443936031">
+            <conditions>
+                <condition id="-13" name="Is between angles" sid="4184369580100327" type="zombie2">
+                    <param id="0" name="First angle">0</param>
+                    <param id="1" name="Second angle">45</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6311556920869185" type="zombie2">
+                    <param id="0" name="Instance variable">dir</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8419510279878589">
+            <conditions>
+                <condition id="-13" name="Is between angles" sid="7078389117409432" type="zombie2">
+                    <param id="0" name="First angle">0</param>
+                    <param id="1" name="Second angle">45</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="3687038460874526" type="zombie2">
+                    <param id="0" name="Instance variable">dir</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1217633822869053">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7318451579749675" type="zombie2">
+                    <param id="0" name="Object">aiBlock</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6635666800348445" type="zombie2">
+                    <param id="0" name="Instance variable">dir</param>
+                    <param id="1" name="Value">(zombie2.dir=0) ? 1 : 0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2316663114484123">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2262749460615344" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="4091664592644151" type="zombie2">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6607756952009485">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4023458836390842" type="Sprite">
+                    <param id="0" name="Object">p1_idle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5178141170826408" type="System">
+                    <param id="0" name="Layout">title</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5549783179368823">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="765521282575782" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5882556277012649" type="hud_score">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; pts</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Interaction Key</comment>
+        <event-block sid="2568483514993921">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="8018859491756994" type="Keyboard">
+                    <param id="0" name="Key">90 (Z)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8704401667158893">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="1585055921048422" type="p1_idle">
+                            <param id="0" name="Object">store</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="3680471347724132" type="System">
+                            <param id="0" name="Layout">l1_store</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9457957588619443">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="6663830585123824" type="p1_idle">
+                            <param id="0" name="Object">ladder</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="1879100490690165" type="p1_idle">
+                            <param id="0" name="Instance variable">climbing</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3864286304302999">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="9697486502786028" type="p1_idle">
+                            <param id="0" name="Object">crate</param>
+                        </condition>
+                        <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="2232424374952142" type="crate" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="3437788165920333" type="crate">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="1267070060837734" type="crate">
+                            <param id="0" name="Pin to">p1_idle</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2680616513201204">
+                    <conditions>
+                        <condition behavior="Pin" id="0" name="Is pinned" sid="2336479551611785" type="crate" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="403845394349372" type="crate" />
+                        <action behavior="Physics" id="27" name="Set enabled" sid="8384123757427652" type="crate">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action behavior="Physics" id="2" name="Apply force at angle" sid="787852196131342" type="crate">
+                            <param id="0" name="Force">500</param>
+                            <param id="1" name="Angle">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="2467370804000409">
+                    <conditions>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="3842933084608433" type="p1_idle">
+                            <param id="0" name="Side">0</param>
+                        </condition>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="3389577746133243" type="p1_idle">
+                            <param id="0" name="Side">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" disabled="1" id="0" name="Set ignoring input" sid="6808879206122242" type="p1_idle">
+                            <param id="0" name="Input">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="7449209662998773" type="p1_idle">
+                            <param id="0" name="Instance variable">sliding</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2520362648314292">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="6697238622689991" type="Keyboard">
+                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="6748140093154189" type="p1_idle">
+                                    <param id="0" name="Max fall speed">p1_idle.Platform.MaxFallSpeed + dt*5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8010168485770699">
+                            <conditions>
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="3204970429954704" type="p1_idle" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="1923930251118191" type="p1_idle">
+                                    <param id="0" name="Instance variable">sliding</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Platform" id="0" name="Set ignoring input" sid="2393677252854828" type="p1_idle">
+                                    <param id="0" name="Input">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="IE: grab, wall jump, etc." sid="6476722015476389" title="Mechanices" />
+        <event-block sid="8615746973831312">
+            <conditions>
+                <condition behavior="Platform" id="4" name="Is falling" sid="2825072404127764" type="p1_idle" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1538285369979113">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="6861068619034597" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="8538481704721802" type="p1_idle">
+                            <param id="0" name="Side">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="8987806999175111" type="p1_idle">
+                            <param id="0" name="Vector Y">-500</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="2843948009755587" type="p1_idle">
+                            <param id="0" name="Vector X">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8664521247254982">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="8594509315915812" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                        <condition behavior="Platform" id="10" name="Is by wall" sid="302341571453574" type="p1_idle">
+                            <param id="0" name="Side">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="5286493402343516" type="p1_idle">
+                            <param id="0" name="Vector Y">-500</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="2264084678541802" type="p1_idle">
+                            <param id="0" name="Vector X">-400</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8730333701379894">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="2043160923285433" type="p1_idle">
+                    <param id="0" name="Instance variable">climbing</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="5" name="Set gravity" sid="123798614612274" type="p1_idle">
+                    <param id="0" name="Gravity">0</param>
+                </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="1602132633790107" type="p1_idle">
+                    <param id="0" name="Vector Y">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6491618814675164">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="2731419483818226" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="8298517274321805" type="p1_idle">
+                            <param id="0" name="Vector Y">-190</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4999762626540439">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="4049663156668967" type="Keyboard">
+                            <param id="0" name="Key">40 (Down arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="1982585243389173" type="p1_idle">
+                            <param id="0" name="Vector Y">190</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6627005425151754">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="7723144936621594" type="p1_idle">
+                            <param id="0" name="Object">ladder</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="3825207165399136" type="p1_idle">
+                            <param id="0" name="Vector Y">-500</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7912999600735292">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="52570913596038" type="Keyboard">
+                    <param id="0" name="Key">90 (Z)</param>
+                </condition>
+                <condition behavior="Platform" id="4" name="Is falling" sid="2671495006330771" type="p1_idle" />
+                <condition id="1" name="Is overlapping another object" sid="8948932230220648" type="p1_idle">
+                    <param id="0" name="Object">edge_grab</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="3891811676317252" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="6455083481953713" type="p1_idle">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="7720003496126476" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;grab&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="5511977786082292" type="p1_idle">
+                    <param id="0" name="X">-(p1_idle.Width &gt; 0) ? edge_grab.X-20 : edge_grab.X+20</param>
+                    <param id="1" name="Y">edge_grab.Y-10</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="8388698330925519" type="p1_idle">
+                    <param id="0" name="Instance variable">grabbing</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="465601209804725">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1294386301798491" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="5652232647198324" type="p1_idle">
+                    <param id="0" name="Instance variable">grabbing</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="4525840262848157" type="p1_idle">
+                    <param id="0" name="Instance variable">grabbing</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="6578789030624875" type="p1_idle">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-2" name="Set Y" sid="4038472813029909" type="p1_idle">
+                    <param id="0" name="Y">p1_idle.Y - 25</param>
+                </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="2229032472281148" type="p1_idle">
+                    <param id="0" name="Vector Y">-650</param>
+                </action>
+                <action id="4" name="Set animation" sid="1282314260906209" type="p1_idle">
+                    <param id="0" name="Animation">char &amp; &quot;jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5812102409068678">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="8728232116136451" type="p1_idle">
+                    <param id="0" name="Object">ladder</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="4518901391190974" type="p1_idle">
+                    <param id="0" name="Instance variable">climbing</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Platform" id="5" name="Set gravity" sid="5399771905693978" type="p1_idle">
+                    <param id="0" name="Gravity">1500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5329159409018175">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9681483085329379" type="p1_idle">
+                    <param id="0" name="Object">1up</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6040851523307928" type="1up" />
+                <action id="3" name="Set progress" sid="6656334766109915" type="healthBar">
+                    <param id="0" name="Value">healthBar.Progress + 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9684392830604785">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7434682871213005" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+                <condition id="-18" name="Is in preview" sid="5195762163404816" type="System" />
+            </conditions>
+            <actions>
+                <action id="20" name="Invoke download of string" sid="8250694293917418" type="Browser">
+                    <param id="0" name="String">p1_idle.AsJSON</param>
+                    <param id="1" name="MIME type">&quot;application/json&quot;</param>
+                    <param id="2" name="Filename">&quot;char.json&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1486191585030234">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3044438132233553" type="Keyboard">
+                    <param id="0" name="Key">69 (E)</param>
+                </condition>
+                <condition id="-18" name="Is in preview" sid="4705461813155092" type="System" />
+            </conditions>
+            <actions>
+                <action id="-30" name="Set from JSON" sid="9588464451152594" type="p1_idle">
+                    <param id="0" name="JSON">Browser.ExecJS(&quot;prompt(&apos;json string&apos;)&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="4069717324901785" title="Funcs" />
+        <event-block sid="6994598877370883">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5281503503684407" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7977835040725817">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="8989899686515031" type="System">
+                            <param id="0" name="Object">dirt</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="17" name="Execute Javascript" sid="4532178162910054" type="Browser">
+                            <param id="0" name="Javascript">&quot;console.log(&apos;&quot; &amp; dirt.Count &amp; &quot;&apos;)&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5465050778743695">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="1482005907860604" type="dirt">
+                                    <param id="0" name="Instance variable">grab</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="7511770837098374">
+                                    <conditions>
+                                        <condition id="-11" name="Is within angle" sid="8260228798623741" type="dirt">
+                                            <param id="0" name="Within">2</param>
+                                            <param id="1" name="Angle">0</param>
+                                        </condition>
+                                        <condition id="-11" name="Is within angle" sid="5148496438295088" type="dirt">
+                                            <param id="0" name="Within">2</param>
+                                            <param id="1" name="Angle">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="8640856704413784" type="dirt">
+                                            <param id="0" name="Object">edge_grab</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">5</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="3120788818344914" type="dirt">
+                                            <param id="0" name="Object">edge_grab</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">6</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="5886026962162019">
+                                    <conditions>
+                                        <condition id="-11" name="Is within angle" sid="4284423674754078" type="dirt">
+                                            <param id="0" name="Within">2</param>
+                                            <param id="1" name="Angle">90</param>
+                                        </condition>
+                                        <condition id="-11" name="Is within angle" sid="1186936643348176" type="dirt">
+                                            <param id="0" name="Within">2</param>
+                                            <param id="1" name="Angle">270</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="1611185590178558" type="dirt">
+                                            <param id="0" name="Object">edge_grab</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="1752358454294899" type="dirt">
+                                            <param id="0" name="Object">edge_grab</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">2</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="4053413050069603" type="dirt">
+                                            <param id="0" name="Object">edge_grab</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">3</param>
+                                        </action>
+                                        <action id="0" name="Spawn another object" sid="1021616304726601" type="dirt">
+                                            <param id="0" name="Object">edge_grab</param>
+                                            <param id="1" name="Layer">2</param>
+                                            <param id="2" name="Image point">4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <variable constant="0" name="inv_select" sid="5280627026609568" static="0" type="number">1</variable>
+        <event-group description="" sid="4263782253213128" title="HUD">
+            <sub-events>
+                <event-block sid="5944653749958658">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="4626847427197762" type="Keyboard">
+                            <param id="0" name="Key">67 (C)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2490484574700981">
+                            <conditions>
+                                <condition id="-9" name="Layer is visible" sid="8103281330242354" type="System">
+                                    <param id="0" name="Layer">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="4622743358889331" type="System">
+                                    <param id="0" name="Layer">1</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7453299548668412">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7843193995331155" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="7514339974738949" type="System">
+                                    <param id="0" name="Layer">1</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9204532649679772">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="7999605520085671" type="Keyboard">
+                            <param id="0" name="Key">86 (V)</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="4974708495454486" type="System">
+                            <param id="0" name="Layer">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2997816410061133" type="System">
+                            <param id="0" name="Variable">inv_select</param>
+                            <param id="1" name="Value">(inv_select = 5) ? (1) : (inv_select+1) </param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6783457200699703">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="7769744731950882" type="Keyboard">
+                            <param id="0" name="Key">66 (B)</param>
+                        </condition>
+                        <condition id="-9" name="Layer is visible" sid="1120848930980739" type="System">
+                            <param id="0" name="Layer">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="5980605744909236">
+                    <conditions>
+                        <condition id="3" name="Has key" sid="3049453210771287" type="array">
+                            <param id="0" name="Key">&quot;i1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1566943519698745" type="item_sq">
+                            <param id="0" name="Animation">array.Get(&quot;i1&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8995950166814601">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="2612342099709297" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1418755851297171">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7089461454053049" type="System">
+                                    <param id="0" name="Variable">inv_select</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="8688930109660914" type="inventory_sq">
+                                    <param id="0" name="Width">80</param>
+                                    <param id="1" name="Height">80</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="8147929411160012" type="inventory_sq2">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="7804990094669128" type="inventory_sq3">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="7141835613214046" type="inventory_sq4">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="4717059884479603" type="inventory_sq5">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6524506374064687">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3938794264334635" type="System">
+                                    <param id="0" name="Variable">inv_select</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="180684378208883" type="inventory_sq">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="9607964225783747" type="inventory_sq2">
+                                    <param id="0" name="Width">80</param>
+                                    <param id="1" name="Height">80</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="3780640495035805" type="inventory_sq3">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="3570354187189745" type="inventory_sq4">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="2635611588861289" type="inventory_sq5">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1913957375321601">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4928744959621311" type="System">
+                                    <param id="0" name="Variable">inv_select</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="6667195634758118" type="inventory_sq">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="1372819272721678" type="inventory_sq2">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="1595663959837758" type="inventory_sq3">
+                                    <param id="0" name="Width">80</param>
+                                    <param id="1" name="Height">80</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="9145641819687882" type="inventory_sq4">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="6330303109139523" type="inventory_sq5">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8227497451638538">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="791539360876327" type="System">
+                                    <param id="0" name="Variable">inv_select</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="2625050544322038" type="inventory_sq">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="2303413543698132" type="inventory_sq2">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="8270306712389737" type="inventory_sq3">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="4226603515512077" type="inventory_sq4">
+                                    <param id="0" name="Width">80</param>
+                                    <param id="1" name="Height">80</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="1703057894831552" type="inventory_sq5">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3367617566011129">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4140938751601888" type="System">
+                                    <param id="0" name="Variable">inv_select</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="8596951840366498" type="inventory_sq">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="5571254701435324" type="inventory_sq2">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="3674599386177631" type="inventory_sq3">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="9442609436882673" type="inventory_sq4">
+                                    <param id="0" name="Width">70</param>
+                                    <param id="1" name="Height">70</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="9002048275731539" type="inventory_sq5">
+                                    <param id="0" name="Width">80</param>
+                                    <param id="1" name="Height">80</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="3378353931788859" title="Crates" />
+        <event-block sid="7109509827559882">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="642093055157186" type="p1_pellets">
+                    <param id="0" name="Object">crate</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3358882349501441" type="p1_pellets" />
+            </actions>
+            <sub-events>
+                <variable constant="0" name="rand" sid="9995590283002824" static="0" type="number">0</variable>
+                <event-block sid="4848717905563077">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="1274388814996466" type="System">
+                            <param id="0" name="Variable">rand</param>
+                            <param id="1" name="Value">choose(0,1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4559840403165947">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7421605334788417" type="System">
+                            <param id="0" name="First value">rand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="994293584008502" type="crate">
+                            <param id="0" name="Object">zombie</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6676021667170033" type="crate" />
+                    </actions>
+                </event-block>
+                <event-block sid="2840360896205133">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="8613908894367673" type="System">
+                            <param id="0" name="First value">rand</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="4175846165371999" type="crate">
+                            <param id="0" name="Object">1up</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="9279121316792434" type="crate" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4277913137864002">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5285926754800229" type="Keyboard">
+                    <param id="0" name="Key">81 (Q)</param>
+                </condition>
+                <condition id="-18" name="Is in preview" sid="7187734814776521" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="5326430826835276" type="p1_idle">
+                    <param id="0" name="Object">solid</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1649312610583192">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4333977480721008" type="Keyboard">
+                    <param id="0" name="Key">192 (`)</param>
+                </condition>
+                <condition id="-18" name="Is in preview" sid="9600984673139291" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="3878120760058065" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6906382557961265">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="5238775281299135" type="p1_idle">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">LayoutHeight - 3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="6861538040974797" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

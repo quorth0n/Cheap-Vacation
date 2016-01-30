@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>_char</name>
+    <events>
+        <variable comment="0 = cj, 1 = j, 2 = li_hood, 3 = li, 4 = r, 5 = rob, 6 = owl" constant="0" name="char" sid="2100233597633464" static="0" type="number">0</variable>
+        <event-block sid="2317346896233269">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3190928280779358" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="5016081211820595" type="chmenu_">
+                    <param id="0" name="Frame number">chmenu_.AnimationFrame + 1</param>
+                </action>
+                <action id="5" name="Set frame" sid="1340503462468952" type="charframes">
+                    <param id="0" name="Frame number">charframes.AnimationFrame + 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3339477131207261">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3268651148707453" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="8525987001341858" type="chmenu_">
+                    <param id="0" name="Frame number">chmenu_.AnimationFrame - 1</param>
+                </action>
+                <action id="5" name="Set frame" sid="7007248240996594" type="charframes">
+                    <param id="0" name="Frame number">charframes.AnimationFrame - 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4892910720440053">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4178727093076375" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">vacationButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3367336788251249" type="System">
+                    <param id="0" name="Variable">char</param>
+                    <param id="1" name="Value">chmenu_.AnimationFrame</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="9879928357639166" type="System">
+                    <param id="0" name="Layout">l1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7887795345981285">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8937218498872583" type="Mouse">
+                    <param id="0" name="Object">vacationButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="2367108838654238" type="Mouse">
+                    <param id="0" name="Cursor style">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4568817202909955">
+            <conditions>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="3612762492910128" type="Mouse">
+                    <param id="0" name="Object">vacationButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="1930210234369971" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
